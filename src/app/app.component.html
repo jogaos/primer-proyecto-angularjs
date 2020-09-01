@@ -1,0 +1,39 @@
+<html>
+
+<head></head>
+
+<body>
+
+  <div [class]="headerClass">
+    <h1>{{header}}</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-3 col-s-3 col-l-3 menu">
+      <ul *ngFor="let menu of menuList">
+        <li>{{menu}}</li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-s-9 col-l-6">
+      <h1>Artículo</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh ligula, rhoncus in ante sit amet, molestie faucibus purus. Cras eu sollicitudin purus. Etiam ornare erat libero, eu finibus ipsum tincidunt ut. Praesent auctor urna at dictum volutpat. Pellentesque ac felis vitae justo scelerisque aliquet.</p>
+    </div>
+
+    <div class="col-3 col-12 col-l-3">
+      <div class="aside">
+      <div *ngFor="let item of textList">
+        <h2>Texto derecho # {{item.id}}</h2>
+        <p>{{item.text}}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Fecha actual: <b>{{currentDate}}</b></p>
+  </div>
+
+</body>
+
+</html>
